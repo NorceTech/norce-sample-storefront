@@ -6,14 +6,14 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 
 WORKDIR /src
-COPY ["storefront/storefront.csproj", "storefront/"]
-RUN dotnet restore "storefront/storefront.csproj"
+COPY ["storefront/Storefront.csproj", "storefront/"]
+RUN dotnet restore "storefront/Storefront.csproj"
 COPY . .
 WORKDIR "/src/storefront"
-RUN dotnet build "storefront.csproj" -c Release -o /app/build
+RUN dotnet build "Storefront.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "storefront.csproj" -c Release -o /app/publish
+RUN dotnet publish "Storefront.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
@@ -22,4 +22,4 @@ COPY --from=publish /app/publish .
 ENV TZ=Europe/Stockholm
 ENV ASPNETCORE_URLS=http://+:1800
 
-ENTRYPOINT ["dotnet", "storefront.dll"]
+ENTRYPOINT ["dotnet", "Storefront.dll"]
