@@ -84,10 +84,10 @@ stages:
         arguments: '--output ./build_results/'
 
     - task: PublishBuildArtifacts@1
-      displayName: Publish ChannelService
+      displayName: Publish Storefront
       inputs:
-        pathtoPublish: './build_results/Storm.ChannelService.API'
-        artifactName: 'ChannelService'
+        pathtoPublish: './build_results/storefront'
+        artifactName: 'Storefront'
 
 - stage: build  
   jobs:
