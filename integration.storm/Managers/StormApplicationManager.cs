@@ -79,12 +79,12 @@ namespace Integration.Storm.Managers
                 if( parm.Type == 1 )
                 {
                     attributeDto.Values = new List<AttributeValueDto>();
-                    AddParametricChildren(parm.Id, parm.Name, "L" + parm.Id, parm.Type.Value, attributeDto.Values, valueIds, currentUser);
+                    await AddParametricChildren(parm.Id, parm.Name, "L" + parm.Id, parm.Type.Value, attributeDto.Values, valueIds, currentUser);
                 }  // Multi value type
                 else if( parm.Type == 2)
                 {
                     attributeDto.Values = new List<AttributeValueDto>();
-                    AddParametricChildren(parm.Id, parm.Name, "L" + parm.Id, parm.Type.Value, attributeDto.Values, valueIds, currentUser);
+                    await AddParametricChildren(parm.Id, parm.Name, "L" + parm.Id, parm.Type.Value, attributeDto.Values, valueIds, currentUser);
                 } // Boolean
                 else if( parm.ValueType == 4 )
                 {

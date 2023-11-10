@@ -87,7 +87,9 @@ namespace Integration.Storm.Managers
             return dto;
         }
 
+#pragma warning disable CS1998
         public async Task<IBasket> DeleteItem(IUser currentUser, string basketId, string partNo)
+#pragma warning restore CS1998
         {
             throw new NotImplementedException();
         }
@@ -111,7 +113,9 @@ namespace Integration.Storm.Managers
             return BasketToDto(stormBasket);
         }
 
+#pragma warning disable CS1998
         public async Task<IBasket> FindOrCreateBasket(IUser currentUser)
+#pragma warning restore CS1998
         {
             throw new NotImplementedException();
         }

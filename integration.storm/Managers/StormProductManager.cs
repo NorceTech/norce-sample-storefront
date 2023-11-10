@@ -240,7 +240,9 @@ namespace Integration.Storm.Managers
             return p;
         }
 
+#pragma warning disable CS1998
         public async Task<IProductList> Query(IUser currentUser, string query)
+#pragma warning restore CS1998
         {
             throw new NotImplementedException();
         }
