@@ -14,7 +14,7 @@ variables:
 - name: namespace
   value: commerce
 - name: applicationName
-  value: sample-storefront
+  value: samplestorefront
 - name: dockerfile
   value: '**/storefront/Dockerfile'
 - name: isMain
