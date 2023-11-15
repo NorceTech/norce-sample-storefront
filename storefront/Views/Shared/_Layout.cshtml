@@ -55,7 +55,7 @@
                         <template v-else>
                             <li><a href="/Customer/Login"><i class="material-icons">perm_identity</i> Login</a></li>
                         </template>
-                        <li><a href="#"><i class="material-icons">favorite_border</i> Wishlist (0)</a></li>
+                        @*<li><a href="#"><i class="material-icons">favorite_border</i> Wishlist (0)</a></li>*@
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle"><img src="/images/flags/usa.png" alt=""> English</a>
                             <ul class="lang-dropdown dropdown-menu">
@@ -101,7 +101,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="/images/logo.png" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="/images/logo.png" alt=""></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -138,7 +138,7 @@
     </nav>
     <!--cart menu side panel-->
     <aside id="cartNavmenu" class="navmenu navmenu-default navmenu-fixed-right offcanvas">
-        <div id="minicart" class="cart-inner">
+        <div id="minicart" class="cart-inner" v-if="info">
             <h4>Your cart ({{ info.externalId }})</h4>
             <hr>
             <ul class="list-unstyled cart-list margin-b-30">
